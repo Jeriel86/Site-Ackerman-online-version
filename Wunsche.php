@@ -82,10 +82,10 @@
                                         <div class="row mb-1">
                                             <div class='col-md-7'><label class="form-label fw-bold" for=""> Füllen Sie bitte aus<br>z.B. schönes Wetter</label></div>
                                             <div class='col-md-5 mt-3'>
-                                                <input type="hidden" name="Beispiel" id="Beispiel" value="0">
-                                                <img src="assets/icon/stars/star-empty.svg" id='Beispiel_1' alt="" class="star">
-                                                <img src="assets/icon/stars/star-empty.svg" id='Beispiel_2' alt="" class="star">
-                                                <img src="assets/icon/stars/star-empty.svg" id='Beispiel_3' alt="" class="star">
+                                                <input type="hidden" name="Beispiel" id="Beispiel" value="3">
+                                                <img src="assets/icon/stars/star.svg" id='Beispiel_1' alt="" class="star">
+                                                <img src="assets/icon/stars/star.svg" id='Beispiel_2' alt="" class="star">
+                                                <img src="assets/icon/stars/star.svg" id='Beispiel_3' alt="" class="star">
                                             </div>
                                         </div>
                                     

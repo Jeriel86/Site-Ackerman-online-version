@@ -1,0 +1,14 @@
+ - ralentir le défilement du carousel
+ - traduire les textes en Allemand
+ - sur tablettes/android, on doit pouvoir entrer les mois, années et jours soi meme
+ - rectifications des affichages de facons responsive (PC, Tablettes, Mobile)
+ - correction de l'affichage des testimonials (surtout le cas où le message est plus long que l'espace prévu) ******* OK
+ - corriger le carousel du bas (ajouter les bouttons de commandes Next et Prev)      *********** OK 
+ - Etat civil  = VERWITWET
+ - Nombre d'enfants = plus de 2
+ - pas de residence = Bundesland
+
+ - cocher par défaut les étoiles de "schönes Wetter"  sur la page Krakenversisherung ........... OK
+
+
+ - Creation de l'espace d'administration 

@@ -75,7 +75,7 @@
             <div class="tab"><h4 > Familienstand</h4> <hr style="height: 5px; width: 30%; background-color:#ff5e14;">
                 <div class="formBloc_BTN Famillienstand" onclick="setInput('Ledig', 'Famillienstand', 'formBloc_BTN Famillienstand')" onmouseover="annimationFormBlocBTNOver('Ledig')" onmouseout="annimationFormBlocBTNOut('Ledig', 'Famillienstand')" id="Ledig" >Ledig</div>
                 <div class="formBloc_BTN Famillienstand" data-toggle="modal" data-target="#myModal" onclick="setInput('Verheiratet', 'Famillienstand', 'formBloc_BTN Famillienstand')" onmouseover="annimationFormBlocBTNOver('Verheiratet')" onmouseout="annimationFormBlocBTNOut('Verheiratet', 'Famillienstand')" id="Verheiratet">Verheiratet</div>
-                <div class="formBloc_BTN Famillienstand" onclick="setInput('Verwitwer', 'Famillienstand', 'formBloc_BTN Famillienstand')" onmouseover="annimationFormBlocBTNOver('Verwitwer')" onmouseout="annimationFormBlocBTNOut('Verwitwer', 'Famillienstand')" id="Verwitwer">Verwitwer</div>
+                <div class="formBloc_BTN Famillienstand" onclick="setInput('Verwitwet', 'Famillienstand', 'formBloc_BTN Famillienstand')" onmouseover="annimationFormBlocBTNOver('Verwitwet')" onmouseout="annimationFormBlocBTNOut('Verwitwet', 'Famillienstand')" id="Verwitwet">Verwitwet</div>
                 <div class="formBloc_BTN Famillienstand" onclick="setInput('Geschieden', 'Famillienstand', 'formBloc_BTN Famillienstand')" onmouseover="annimationFormBlocBTNOver('Geschieden')" onmouseout="annimationFormBlocBTNOut('Geschieden', 'Famillienstand')" id="Geschieden">Geschieden</div>
                 <div class="formBloc_BTN Famillienstand" onclick="setInput('Eingetragene_Partnerschaft', 'Famillienstand', 'formBloc_BTN Famillienstand')" onmouseover="annimationFormBlocBTNOver('Eingetragene_Partnerschaft')" onmouseout="annimationFormBlocBTNOut('Eingetragene_Partnerschaft', 'Famillienstand')" id="Eingetragene_Partnerschaft">Eingetragene Partnerschaft</div>
                 <input type="hidden" name="Famillienstand" id="Famillienstand" oninput="this.className = ''">
@@ -127,7 +127,7 @@
                 <div class="formBloc_BTN Anzahl_der_kind" onclick="setInput('keine_Kinder', 'Anzahl_der_kind', 'formBloc_BTN Anzahl_der_kind')" onmouseover="annimationFormBlocBTNOver('keine_Kinder')" onmouseout="annimationFormBlocBTNOut('keine_Kinder', 'Anzahl_der_kind')" id="keine_Kinder">keine Kinder</div>
                 <div class="formBloc_BTN Anzahl_der_kind" onclick="setInput('1_kind', 'Anzahl_der_kind', 'formBloc_BTN Anzahl_der_kind')" onmouseover="annimationFormBlocBTNOver('1_kind')" onmouseout="annimationFormBlocBTNOut('1_kind', 'Anzahl_der_kind')" id="1_kind">1 kind</div>
                 <div class="formBloc_BTN Anzahl_der_kind" onclick="setInput('2_kind', 'Anzahl_der_kind', 'formBloc_BTN Anzahl_der_kind')" onmouseover="annimationFormBlocBTNOver('2_kind')" onmouseout="annimationFormBlocBTNOut('2_kind', 'Anzahl_der_kind')" id="2_kind">2 kind</div>
-                <div class="formBloc_BTN Anzahl_der_kind" onclick="setInput('mehr_als_2_kind', 'Anzahl_der_kind', 'formBloc_BTN Anzahl_der_kind')" onmouseover="annimationFormBlocBTNOver('mehr_als_2_kind')" onmouseout="annimationFormBlocBTNOut('mehr_als_2_kind', 'Anzahl_der_kind')" id="mehr_als_2_kind">mehr als 2 kind</div>
+                <div class="formBloc_BTN Anzahl_der_kind" onclick="setInput('mehr_als_2_kinder', 'Anzahl_der_kind', 'formBloc_BTN Anzahl_der_kind')" onmouseover="annimationFormBlocBTNOver('mehr_als_2_kinder')" onmouseout="annimationFormBlocBTNOut('mehr_als_2_kinder', 'Anzahl_der_kind')" id="mehr_als_2_kinder">mehr als 2 kinder</div>
                 <input type="hidden" name="Anzahl_der_kind" id="Anzahl_der_kind" oninput="this.className = ''" >
             </div>
 
@@ -159,22 +159,22 @@
             
             <div class="tab">  <h4 class="  ">Beihilfeland </h4> <hr style="height: 5px; width: 30%; background-color:#ff5e14;">
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="Beihilfeland" id="Beihilfeland">
-                    <option selected>Bund</option>
-                    <option value="1">Baden Württemberg</option>
-                    <option value="2"> Bayern</option>
-                    <option value="3"> Berlin</option>
-                    <option value="4">Brandenburg </option>
-                    <option value="5">Bremen</option>
-                    <option value="6">Hamburg</option>
-                    <option value="7">Hessen</option>
-                    <option value="8">Mecklenburg-Vorpommern</option>
-                    <option value="9">Niedersachsen</option>
-                    <option value="10">Nordrhein Westfalen</option>
-                    <option value="11">Rheinland-Pfalz</option>
-                    <option value="12">Saarland</option>
-                    <option value="13">Sachsen</option>
-                    <option value="14">Schleswig-Holstein</option>
-                    <option value="15">Thüringen</option>
+                    <option value="Bundesland" selected>Bundesland</option>
+                    <option value="Baden Württemberg">Baden Württemberg</option>
+                    <option value="Bayern"> Bayern</option>
+                    <option value="Berlin"> Berlin</option>
+                    <option value="Brandenburg">Brandenburg </option>
+                    <option value="Bremen">Bremen</option>
+                    <option value="Hamburg">Hamburg</option>
+                    <option value="Hessen">Hessen</option>
+                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                    <option value="Niedersachsen">Niedersachsen</option>
+                    <option value="Nordrhein Westfalen">Nordrhein Westfalen</option>
+                    <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                    <option value="Saarland">Saarland</option>
+                    <option value="Sachsen">Sachsen</option>
+                    <option value="Schleswig-Holstein">Schleswig-Holstein</option>
+                    <option value="Thüringen">Thüringen</option>
                 </select> <br><br>
                 <h4 class="">Gesundheitscheck</h4><hr style="height: 5px; width: 30%; background-color:#ff5e14;"> <br>
                 <div class="container text-center">
