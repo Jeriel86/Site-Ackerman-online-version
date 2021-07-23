@@ -300,7 +300,7 @@
                             <div class="row mt-3">
                                 <div class="col-md-4"></div>
                                 <a class="btn btn-lg btn-success p-3 col-md-2 mx-4" href="pdf/Handout.pdf" role="button" download="Handout.pdf" >Handout Downloaden</a>
-                                <input type="submit" value="Submit"  class="btn btn-lg btn-primary p-3 col-md-2 mx-4">
+                                <input type="submit" value="Einreichen"  class="btn btn-lg btn-primary p-3 col-md-2 mx-4">
                             </div>
                         </div>
                     </div>

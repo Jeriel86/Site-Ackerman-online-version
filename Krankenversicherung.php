@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-5">
                         <p>
-                            <label for="exampleFormControlInput1" class="form-label fw-bold">PLZ</label>
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">PLZ, Ort</label>
                             <input type="text" class="form-control" name="PLZ" id="HausNummer" value="<?php if(isset($PLZ)){echo $PLZ;} ?>"  required placeholder="" onblur="checkPLZ()" oninput="this.className = ''">
                         </p>
                     </div>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <p>
                         <label for="exampleFormControlInput1" class="form-label fw-bold">Telefonnummer</label>
-                        <input type="number" class="form-control" name="phone" id="phone"required value="<?php if(isset($phone)){echo $phone;} ?>"  placeholder="" oninput="this.className = ''">
+                        <input type="number" class="form-control" name="phone" id="phone" value="<?php if(isset($phone)){echo $phone;} ?>"  placeholder="" oninput="this.className = ''">
                     </p>
                 </div>
                 <div class="row">
