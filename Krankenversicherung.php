@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-5">
                         <p>
-                            <label for="exampleFormControlInput1" class="form-label fw-bold">PLZ, ORT</label>
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">PLZ, Ort</label>
                             <input type="text" class="form-control" name="PLZ" id="HausNummer" value="<?php if(isset($PLZ)){echo $PLZ;} ?>"  required placeholder="" onblur="checkPLZ()" oninput="this.className = ''">
                         </p>
                     </div>

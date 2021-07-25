@@ -1,14 +1,17 @@
  - ralentir le défilement du carousel
- - traduire les textes en Allemand
+ - traduire les textes en Allemand....OK
  - sur tablettes/android, on doit pouvoir entrer les mois, années et jours soi meme
  - rectifications des affichages de facons responsive (PC, Tablettes, Mobile)
  - correction de l'affichage des testimonials (surtout le cas où le message est plus long que l'espace prévu) ******* OK
  - corriger le carousel du bas (ajouter les bouttons de commandes Next et Prev)      *********** OK 
- - Etat civil  = VERWITWET
- - Nombre d'enfants = plus de 2
- - pas de residence = Bundesland
+ - Etat civil  = VERWITWET....OK
+ - Nombre d'enfants = plus de 2....OK
+ - pas de residence = Bundesland ....OK
+ - Ort a cote de PLZ ......OK
+ - numero de telephone doit etre facultatif sur la page Krankenversicherung
 
  - cocher par défaut les étoiles de "schönes Wetter"  sur la page Krakenversisherung ........... OK
+ - terminer la page Gewinnspiel.(C'est une page qui presente les conditions de participations au jeu organisé par la société ). Le document correspondant est dans le projet
 
 
  - Creation de l'espace d'administration 

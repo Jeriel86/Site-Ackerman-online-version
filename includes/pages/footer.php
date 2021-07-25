@@ -19,7 +19,7 @@
           <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
             <div class="footer-widget">
               <div class="footer-widget-heading ">
-                <h3 class="text-dark text-sm-center text-center">Useful Links</h3>
+                <h3 class="text-dark text-sm-center text-center">Nützliche Links</h3>
               </div>
               <ul>
                 <li>
@@ -33,6 +33,7 @@
                 <li><a href="about.php">Über Uns</a></li>
                 <li><a href="impressum.php">Impressum</a></li>
                 <li><a href="about.php#kontakt">Kontakt</a></li>
+                <li><a href="gewinnspiel.php">Gewinnspiel </a></li>
 
               </ul>
             </div>
