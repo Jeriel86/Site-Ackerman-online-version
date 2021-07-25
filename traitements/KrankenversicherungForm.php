@@ -17,7 +17,7 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
                                 <td> ".$straBe."</td>
                             </tr>
                             <tr>
-                                <td><b>PLZ :</b></td>
+                                <td><b>PLZ, ORT :</b></td>
                                 <td> ".$PLZ."</td>
                             </tr>
                             <tr>
@@ -162,7 +162,6 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
 
     // présent juste pour les testes; au péloiement il va faloir l'enlever et le recopier plus haut; 
     $_SESSION['submitedData'] = $_POST;
-    
     if($retVal == true){ // si l'envoit a réussi
         $messageFlash['type'] = "success";
         header('location: ../Wunsche.php');

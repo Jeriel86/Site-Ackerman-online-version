@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-5">
                         <p>
-                            <label for="exampleFormControlInput1" class="form-label fw-bold">PLZ</label>
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">PLZ, ORT</label>
                             <input type="text" class="form-control" name="PLZ" id="HausNummer" value="<?php if(isset($PLZ)){echo $PLZ;} ?>"  required placeholder="" onblur="checkPLZ()" oninput="this.className = ''">
                         </p>
                     </div>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <p>
                         <label for="exampleFormControlInput1" class="form-label fw-bold">Telefonnummer</label>
-                        <input type="number" class="form-control" name="phone" id="phone"required value="<?php if(isset($phone)){echo $phone;} ?>"  placeholder="" oninput="this.className = ''">
+                        <input type="number" class="form-control telefonnummer" name="phone" id="phone" value="<?php if(isset($phone)){echo $phone;} ?>"  placeholder="" oninput="this.className = ''" >
                     </p>
                 </div>
                 <div class="row">
@@ -109,7 +109,7 @@
                             <input class="form-control partner" type="tel" name="partnerphone" id="partnerphone" value="<?php if(isset($partnerphone)){echo $partnerphone;} ?>"  oninput="this.className = ''">
                         </div>
                         <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fortfahren</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fortfahren</button>
                         </div>
                     </div>
                     </div>
@@ -278,7 +278,7 @@
             y = x[currentTab].getElementsByTagName("input");
             // A loop that checks every input field in the current tab:
             for (i = 0; i < y.length; i++) {
-                if(y[i].className != "form-control partner"){                    
+                if(y[i].className != "form-control partner" && y[i].id != "phone"){    
                     // If a field is empty...
                     if (y[i].value == "") {
                         // add an "invalid" class to the field:

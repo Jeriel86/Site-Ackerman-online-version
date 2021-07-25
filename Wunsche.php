@@ -2,9 +2,20 @@
     session_start();
     $pagename = "Wünsche"; 
     $pageStyles= "<link rel='stylesheet' href='assets/css/wunsche.css'>"; //balise pour ajouter un fichier CSS propre à cette page 
-     include "includes/pages/header.php" ?>
-
-
+     include "includes/pages/header.php";
+?>
+<?php   
+    if (isset($_SESSION['submitedData'])){
+        if ($_SESSION['submitedData']["Anzahl_der_kind"] == "2_kind"){
+        ?>        
+        <script lang="Javascript"> numberOfKind = 2 </script>
+        <?php  }elseif ($_SESSION['submitedData']["Anzahl_der_kind"] == "mehr_als_2_kinder") {
+        ?>        
+        <script lang="Javascript"> numberOfKind = 3 </script>
+        <?php   
+        }
+    } 
+?>
 
 <section class="leistung">
     <h3 class="text-center  fw-bol mt-3">Wir empfehlen</h3>
@@ -316,6 +327,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/traitementForm1.js"></script>
     <script src="assets/js/traitementForm2.js"></script>
+    <script>	
+        window.onload(displayUser())
+        function displayUser(){
+            if (numberOfKind == 2){
+                addUser()
+            }
+            if (numberOfKind == 3){
+                addUser()
+                addUser()
+            }
+        }
+    </script>
 </body>
 
 </html>
