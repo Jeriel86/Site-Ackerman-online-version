@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 19 mai 2021 à 07:21
+-- Généré le : Dim 25 juil. 2021 à 09:08
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.2.34
 
@@ -20,6 +20,32 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `beamtenversicherung`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `superusers`
+--
+
+CREATE TABLE `superusers` (
+  `id` int(11) NOT NULL,
+  `name` varchar(60) NOT NULL,
+  `surname` varchar(100) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `joined_at` datetime DEFAULT current_timestamp(),
+  `account_validated` tinyint(1) NOT NULL DEFAULT 0,
+  `validation_token` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `superusers`
+--
+
+INSERT INTO `superusers` (`id`, `name`, `surname`, `mail`, `password`, `joined_at`, `account_validated`, `validation_token`) VALUES
+(1, 'hermanno', 'ergdf', 'Hermannno@gmil.cil', 'ezzsd', '2021-07-25 07:40:02', 1, 'dfkdfvdfFFRJZhjDjdsAPd65DSDkqss5'),
+(3, 'hermannohg', 'ngh j', 'dfvdf@gmail.vom', '65', '2021-07-25 08:06:09', 1, 'dfkdfvdfFFRJZhjDjdsAPd65DSDkqss5'),
+(4, 'hermanno', 'ergdf', 'Hermannno@gmil.cil', 'hghg', '2021-07-25 08:07:13', 1, 'dfkdfvdfFFRJZhjDjdsAPd65DSDkqss5');
 
 -- --------------------------------------------------------
 
@@ -47,7 +73,12 @@ INSERT INTO `testimonial` (`id`, `pseudo`, `content`) VALUES
 (26, 'hermanno', 'mus molestias autem nobis quasi quae, recusandae non eligendi. Facilis eius labore eaque consequuntura description of an aspect of the enterprise Lorem ipsum dolorquatur totam architecto porro accusamus molestias autem nobis quasi quae, recusandae non eligendi. Facilis eius labore eaque consequuntur\"mus molestias autem nobis quasi quae, recusandae non eligendi. Facilis eius labore eaque consequuntura description of an aspect of the enterprise Lorem ipsum dolorquatur totam architecto porro accusamus molestias autem nobis quasi quae, recusandae non eligendi. Facilis eius labore eaque consequuntur\"'),
 (28, 'un testeur', 'un site tres top j\'adore !'),
 (29, 'un testeur', 'un site tres top j\'adore !'),
-(30, 'hermanno', '$Fetch_testimonials$Fetch_testimonials');
+(30, 'hermanno', '$Fetch_testimonials$Fetch_testimonials'),
+(31, 'dfv', ',n ,b'),
+(32, 'testeur', 'hefzlcs sdcs\r\ndfvdfvkdfj'),
+(33, 'alex', 'ich möchte Lehrer für Mathe und Sport werden und bin gerade im 5 Semester. Nach der Beratung fühle ich mich sicherer auf meinen Weg zum Lehrersein. Auch telefonisch waren die Fragen einfach und verständlich erläutert.'),
+(34, 'fgbfgbfgbfgb fgbjf gbhf gjb fgjb fjg', 'lfddffdd Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sed in perspiciatis sit, porro aut rem nemo id eligendi doloribus dignissimos enim accusantium ex tempore, vitae similique est? Reprehenderit, beatae.\r\n'),
+(35, 'Lorem ipsum dolor sit amet consectetur a', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sed in perspiciatis sit, porro aut rem nemo id eligendi doloribus dignissimos enim accusantium ex tempore, vitae similique est? Reprehenderit, beatae.\r\n');
 
 -- --------------------------------------------------------
 
@@ -75,11 +106,21 @@ INSERT INTO `visits` (`id`, `pageName`, `ip`, `date`, `nb`) VALUES
 (6, '/beamtenversicherung-vkb/Wunsche.php', '::1', '2021-05-19 04:40:50', 1),
 (7, '/beamtenversicherung-vkb/about.php', '::1', '2021-05-19 04:43:09', 2),
 (8, '/beamtenversicherung-vkb/datenschutz.php', '::1', '2021-05-19 04:44:26', 1),
-(9, '/beamtenversicherung-vkb/Krankenversicherung.php', '::1', '2021-05-19 05:21:08', 1);
+(9, '/beamtenversicherung-vkb/Krankenversicherung.php', '::1', '2021-05-19 05:21:08', 1),
+(10, '/beamtenversicherung-vkb.de/index.php', '::1', '2021-07-25 03:37:35', 2),
+(11, '/beamtenversicherung-vkb.de/Wunsche.php', '::1', '2021-07-25 05:26:13', 2),
+(12, '/beamtenversicherung-vkb.de/about.php', '::1', '2021-07-22 07:10:34', 1),
+(13, '/beamtenversicherung-vkb.de/Krankenversicherung.php', '::1', '2021-07-25 05:39:13', 2);
 
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `superusers`
+--
+ALTER TABLE `superusers`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `testimonial`
@@ -98,16 +139,22 @@ ALTER TABLE `visits`
 --
 
 --
+-- AUTO_INCREMENT pour la table `superusers`
+--
+ALTER TABLE `superusers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT pour la table `testimonial`
 --
 ALTER TABLE `testimonial`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT pour la table `visits`
 --
 ALTER TABLE `visits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
