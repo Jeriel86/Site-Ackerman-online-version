@@ -75,5 +75,4 @@
   </footer>
   <?php 
   ///vidange des variables sessions
-      include 'clearMessageFlash.php';
   ?>

@@ -8,10 +8,16 @@
  - Nombre d'enfants = plus de 2....OK
  - pas de residence = Bundesland ....OK
  - Ort a cote de PLZ ......OK
- - numero de telephone doit etre facultatif sur la page Krankenversicherung
+ - numero de telephone doit etre facultatif sur la page Krankenversicherung..... ok 
 
  - cocher par défaut les étoiles de "schönes Wetter"  sur la page Krakenversisherung ........... OK
  - terminer la page Gewinnspiel.(C'est une page qui presente les conditions de participations au jeu organisé par la société ). Le document correspondant est dans le projet
 
 
- - Creation de l'espace d'administration 
+ - Creation de l'espace d'administration
+    - creation du module d'authentification...........ok 
+        - design des page de login/register ...... ok
+        - pour l'enregistrement, il se fait par confirmation de de token de la part de l'entreprise...... ok
+        - création de "suppression de compte" ..... hummm on va voit si c'est meme nécessaire
+    - 
+    - design de la page d'acceuil de l'administration
