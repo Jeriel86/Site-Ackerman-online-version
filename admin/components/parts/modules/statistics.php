@@ -32,11 +32,14 @@
                     <span class="h5"><?php echo $nbVisits; ?></span>
                 </div>
                 <div class="card-body bg-white d-flex justify-content-between">
-                    <a href="?details=visits" class="btn-primary btn text-white">details...</a>
-                    <form action="" method="post" class="p-0 m-0">
-                        <button href="" class="btn-secondary btn text-white">details...</button>
-                    </form>
+                    <a href="#visitsDetails" class="btn-primary btn text-white">details...</a>
+                    <button data-toggle="modal" data-target="#resetModal" class="btn-secondary btn text-white">Reset</button>
                 </div>
+            </div>
+        </div>
+        <!-- modal pour réinitialiser les valeurs (il va etre dynamique en fonction des valeurs qu'il recevra en paramettre) -->
+        <div class="modal" id="resetModal">
+            <div class="modal-dialog">
             </div>
         </div>
         <div class="col-md-6 col-lg-3 p-2">
@@ -46,9 +49,9 @@
                     <span class="h5"><?php echo $nbKontakt; ?></span>
                 </div>
                 <div class="card-body bg-white d-flex justify-content-between">
-                    <a href="?details=Kontakt" class="btn-info btn text-white">details...</a>
+                    <a href="?cible=stats_details&details=Kontakt" class="btn-info btn text-white">details...</a>
                     <form action="" method="post" class="p-0 m-0">
-                        <button href="" class="btn-secondary btn text-white">Reset</button>
+                        <button  class="btn-secondary btn text-white">Reset</button>
                     </form>
                 </div>
             </div>
@@ -56,13 +59,13 @@
         <div class="col-md-6 col-lg-3 p-2">
             <div class=" bg-primary p-0 rounded card" >
                 <div class="card-title d-flex justify-content-between m-0  p-2 pb-0 rounded-top text-white">
-                    <h5>Krankenversisherung (sent):</h5>
+                    <h5>Krankenversicherung (sent):</h5>
                     <span class="h5"><?php echo $nbKrankenversicherungForm; ?></span>
                 </div>
                 <div class="card-body bg-white d-flex justify-content-between">
-                    <a href="?details=Krankenversisherung" class="btn-primary btn text-white">details...</a>
+                    <a href="?cible=stats_details&details=Krankenversicherung" class="btn-primary btn text-white">details...</a>
                     <form action="" method="post" class="p-0 m-0">
-                        <button href="" class="btn-secondary btn text-white">details...</button>
+                        <button  class="btn-secondary btn text-white">Reset</button>
                     </form>
                 </div>
             </div>
@@ -74,15 +77,15 @@
                     <span class="h5"><?php echo $WunscheForm; ?></span>
                 </div>
                 <div class="card-body bg-white d-flex justify-content-between">
-                    <a href="?details=Wunshe" class="btn-info btn text-white">details...</a>
+                    <a href="?cible=stats_details&details=Wunshe" class="btn-info btn text-white">details...</a>
                     <form action="" method="post" class="p-0 m-0">
-                        <button href="" class="btn-secondary btn text-white">details...</button>
+                        <button  class="btn-secondary btn text-white">Reset</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="visitsDetails">
         <div class="col-md-8 p-2">
             <div class=" bg-light p-0 rounded card" >
                 <div class="card-title  p-2 m-1  mb-0">

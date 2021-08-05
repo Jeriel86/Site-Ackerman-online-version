@@ -21,3 +21,8 @@
         - création de "suppression de compte" ..... hummm on va voit si c'est meme nécessaire
     - 
     - design de la page d'acceuil de l'administration
+
+
+heures de travail (concernant les corrections  et l'ajout du systeme d'admin) :
+    - Hermann :  23 h (total) 
+             

@@ -274,7 +274,9 @@ if (isset($_POST))
                     mail : <?php  echo $_SESSION['auth']['mail']; ?>
                 </p>
                 <br>
-                <a href="?edit"> edit ? </a>
+                <a href="?edit"> edit ?</a>
+                 | 
+                <a href="../"> Go Home </a>
             </div>
         </div>
 

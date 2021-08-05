@@ -29,7 +29,9 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
     $_SESSION['submitedData'] = $_POST;
     if($retVal == true){ // si l'envoit a réussi
         include ("functions.php");
-        save_mail_sent(Null, $to, $subject, $message,  "News Letter");
+        save_mail_sent($mail, $to, $subject, $message,  "News Letter");
+        // ici on doit envoyer un mail à l'utilisateur pour lui dire que son abonnement a réussi
+        // mail($mail,"")
         $messageFlash['type'] = "success";
         $messageFlash['message'] = "Success, your message have been sent ! you will be redirected to the home page soon..."; //on définit le message d'alerte
         $_SESSION['messageFlash'] = $messageFlash;
@@ -40,6 +42,5 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
         $messageFlash['type'] = "danger";
         $_SESSION['messageFlash'] = $messageFlash;
         header('location: ../index.php#footer');
-        
     }
 }

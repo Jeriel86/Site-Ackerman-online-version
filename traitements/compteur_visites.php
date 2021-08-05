@@ -1,7 +1,9 @@
 <?php 
     // On se connecte à la base de donnée.
-    include ("functions.php");
-    $db = db_connection("traitements/secure/DataBaseCredentials.php");
+    if(!isset($db)){
+        include ("functions.php");
+       $db = db_connection("traitements/secure/DataBaseCredentials.php");
+    }
     // on défini quelques variables :
     $page = $_SERVER['SCRIPT_NAME']; // l'url de la page qui est chargée sur le serveur ( la page dont on veut le nombre de visites)
     $ip = $_SERVER['REMOTE_ADDR']; // l'addresse du client qui charge la page
