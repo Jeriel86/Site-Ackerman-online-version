@@ -73,7 +73,7 @@
                     </div>
                     <div class="form-group fw-bold">
                         <label for="form-message">Ihre Nachricht:</label>
-                        <textarea class="form-control" id="form-message" name="message" placeholder="Nachricht" value="<?php if(isset($message)){echo $message;} ?>"  required="required"></textarea>
+                        <textarea class="form-control" id="form-message" name="message" placeholder="Nachricht"  required="required"><?php if(isset($message)){echo $message;} ?></textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-1 m-1">

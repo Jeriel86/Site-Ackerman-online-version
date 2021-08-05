@@ -1,11 +1,7 @@
 <?php 
     // On se connecte à la base de donnée.
-    try {
-        include('secure/DataBaseCredentials.php'); //vu qu'on y accede depuis l'emplacement cette page
-        $db = new PDO('mysql:host='.$db_host.';dbname='.$db_name.';charset=utf8', $db_user , $db_pwd);
-    } catch (Exception $e) {
-        die("Erreur : ".$e->getMessage());
-    }
+    include ("functions.php");
+    $db = db_connection("traitements/secure/DataBaseCredentials.php");
     // on défini quelques variables :
     $page = $_SERVER['SCRIPT_NAME']; // l'url de la page qui est chargée sur le serveur ( la page dont on veut le nombre de visites)
     $ip = $_SERVER['REMOTE_ADDR']; // l'addresse du client qui charge la page

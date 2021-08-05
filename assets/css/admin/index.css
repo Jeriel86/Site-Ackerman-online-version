@@ -1,0 +1,9 @@
+a {
+    text-decoration: none;
+}
+.side-nav a:hover{
+    background-color: rgba(25, 223, 223, 0.856);
+}
+.side-nav a.active{
+    background-color: #0dcaf0!important;
+}

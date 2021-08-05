@@ -27,8 +27,9 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
     //envoit du mail proprement dit
     $retVal = mail($to, $subject, $message, $header); //on envoit le mail et on stoque la valeur de retour dans la variable $retval
     $_SESSION['submitedData'] = $_POST;
-
     if($retVal == true){ // si l'envoit a réussi
+        include ("functions.php");
+        save_mail_sent(Null, $to, $subject, $message,  "News Letter");
         $messageFlash['type'] = "success";
         $messageFlash['message'] = "Success, your message have been sent ! you will be redirected to the home page soon..."; //on définit le message d'alerte
         $_SESSION['messageFlash'] = $messageFlash;
@@ -39,12 +40,6 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
         $messageFlash['type'] = "danger";
         $_SESSION['messageFlash'] = $messageFlash;
         header('location: ../index.php#footer');
+        
     }
-
-    // présent juste pour les testes; au péloiement il va faloir l'enlever et le recopier plus haut;
-    //  header('location: ../Form4.php?lastForm="'.$_POST.'"');
-    header('refresh:15;url=../index.php');
-    echo'<br><br><br><br> <marquee direction="up"><center><b><H1>vous  allez etre redirrigé dans 15 secondes...</H1></b></center></marquee><br><br><br>';
-    echo $message; //on affiche les tableauc la (il faut supprimer la ligne ci apres hein, c'est juste pour l'exemple)
-
 }

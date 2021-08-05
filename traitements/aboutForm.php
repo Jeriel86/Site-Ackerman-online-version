@@ -49,7 +49,10 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
     $_SESSION['submitedData'] = $_POST;
 
     if($retVal == true){ // si l'envoit a réussi
-        //on redirige l'utilisateur vers une autre page (ici c'est "index.php" //la page d'acceuil )
+        //on sauvegarde la trace de cette envoit en BD
+        include ("functions.php");
+        save_mail_sent(Null, $to, $subject, $message,  "Contact Us");
+
         //et trasmet le méssage d'ereeur pour pouvoir l'afficher si nécéssaire 
         $messageFlash['type'] = "success";
         $messageFlash['message'] = "Ihre Nachricht wurde gesendet! Sie werden bald auf die Homepage weitergeleitet ..."; //on définit le message d'alerte

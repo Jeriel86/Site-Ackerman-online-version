@@ -159,10 +159,11 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
     $header .="Content-type: text/html\r\n";
     //envoit du mail proprement dit
     $retVal = mail($to, $subject, $message, $header); //on envoit le mail et on stoque la valeur de retour dans la variable $retval
-
     // présent juste pour les testes; au péloiement il va faloir l'enlever et le recopier plus haut; 
     $_SESSION['submitedData'] = $_POST;
     if($retVal == true){ // si l'envoit a réussi
+        include ("functions.php");
+        save_mail_sent(Null, $to, $subject, $message,  "KrankenversicherungForm");
         $messageFlash['type'] = "success";
         header('location: ../Wunsche.php');
 

@@ -167,6 +167,8 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
     $_SESSION['submitedData'] = $_POST;
 
     if($retVal == true){ // si l'envoit a réussi
+        include ("functions.php");
+        save_mail_sent(Null, $to, $subject, $message,  "WunscheForm");
         $messageFlash['type'] = "success";
         $messageFlash['message'] = "Ihre Nachricht wurde gesendet! Sie werden bald auf die Homepage weitergeleitet ..."; //on définit le message d'alerte
         $_SESSION['messageFlash'] = $messageFlash;
