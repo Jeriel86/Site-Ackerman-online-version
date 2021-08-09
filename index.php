@@ -31,7 +31,7 @@ include "traitements/testimonialForm.php";
           <div class="overlay"></div>
           <div class="carousel-item-description justify-content-center carou w-100 p-0 m-0">
             <div class="mt-4 p-0">
-              <ul class="txt  p-0  w-75 m-auto" style="">
+              <ul class="txt  p-0  w-75 m-auto">
               <h4 class="">Willkommen bei der Generalagentur Sascha Ackermann</h4>
                 <li>Wir möchten Sie als <span class="fst-italic fw-bold">Menschen kennenlernen.</span></li>
                 <li>Wir <span class="fst-italic fw-bold">helfen</span> Ihnen bei den
