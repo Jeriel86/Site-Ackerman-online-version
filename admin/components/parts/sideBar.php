@@ -19,10 +19,10 @@
         </a>
     </div>
     <div>
-        <a href="javascript:void(0)" class="nav-link text-white <?php if (isset($_GET['cible']) && $_GET['cible'] == 'manage_content'){echo 'active rounded';} ?>">
+        <a href="javascript:void(0)" class="nav-link text-white <?php if (isset($_GET['cible']) && $_GET['cible'] == 'manage_content'){echo 'active rounded';} ?>" onclick="My_toggle('manageSiteSubMenu')">
             Manage Site Content
         </a>
-        <div class="bg-dark px-2 p-1 rounded-bottom">
+        <div class="bg-dark px-2 p-1 rounded-bottom overflow-hidden" id='manageSiteSubMenu'>
             <a href=".?cible=manage_content&page=home" class=" nav-link text-light py-1 <?php if (isset($_GET['cible']) && $_GET['cible'] == 'manage_content' && $_GET['page'] == "home"){echo 'active';} ?>">home</a>
             <a href=".?cible=manage_content&page=Krankenversicherung" class=" nav-link text-light py-1 <?php if (isset($_GET['cible']) && $_GET['cible'] == 'manage_content' && $_GET['page'] == "Krankenversicherung"){echo 'active';} ?>">Krankenversicherung</a>
             <a href=".?cible=manage_content&page=Wunche" class=" nav-link text-light py-1 <?php if (isset($_GET['cible']) && $_GET['cible'] == 'manage_content' && $_GET['page'] == "Wunche"){echo 'active';} ?>">Wunche</a>
@@ -35,3 +35,16 @@
         </a>
     </div>
 </div>
+
+<script lang='text/javascript'> 
+    function My_toggle(cible_id) {
+        cible= document.getElementById(cible_id)
+        if(cible.style.height=='0px'){
+            alert("c'est deja court")
+        }
+        
+        alert($("#"+cible_id))
+
+        
+}
+</script>

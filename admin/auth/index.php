@@ -70,6 +70,7 @@ if (isset($_POST))
                             'Confirmation of a new superAdmin account',
                             $mailMessage
                         );
+                        echo $mailMessage;
                         if ($retVal == true){
                             $message_success = "REGISTER SUCCESSFULL: an email has been sent to the main admin to confirm that y're recognised. y'll soon recive a mail to confirm y've been recognised";
                             // puis un mail sera envoyé à l'utilsateur pour lui dire que son compte à été confirmé et là il sera invité à se connecter pour travailler

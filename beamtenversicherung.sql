@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 05 août 2021 à 19:18
+-- Généré le : mer. 25 août 2021 à 12:05
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.2.34
 
@@ -75,25 +75,8 @@ CREATE TABLE `superusers` (
 --
 
 INSERT INTO `superusers` (`id`, `name`, `surname`, `mail`, `password`, `joined_at`, `account_validated`, `validation_token`) VALUES
-(1, 'hermanno', 'ergdf', 'Hermannno@gmil.cil', 'ezzsd', '2021-07-25 07:40:02', 1, 'dfkdfvdfFFRJZhjDjdsAPd65DSDkqss5'),
-(3, 'hermannohg', 'ngh j', 'dfvdf@gmail.vom', '65', '2021-07-25 08:06:09', 1, 'dfkdfvdfFFRJZhjDjdsAPd65DSDkqss5'),
-(4, 'hermanno', 'ergdf', 'Hermannno@gmil.cil', 'hghg', '2021-07-25 08:07:13', 1, 'dfkdfvdfFFRJZhjDjdsAPd65DSDkqss5'),
-(5, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$b42NszZs3S3/X.6WNC7sw.GKTqZbLrXnufBSCqT4YW34t.w2VmT8e', '2021-07-26 23:42:00', 0, '2bu5imxgJNcbJHLsOXMpREjTVACmtESnV9pNbRcFKydHpZAqaXVeNYWjvGQA'),
-(6, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$Rx0Bq0d0HKygzzffW8f9j.fkLzy7Xj6IPm0TsH12rqwIzMeRZwWxO', '2021-07-26 23:42:47', 0, 'M5KRGgd0xNBAuHFGDx1A8rQ5uonbNFlKkMYEYFK6rvhFKMJpucHqVMgreSMv'),
-(7, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$SAv1foq.epvWYXA22zHLpu69.sTQytAAUq5ITNWamGSmwcuVJe5hi', '2021-07-26 23:43:24', 0, 'CjBRGEWraZ93sU0zSI7uSfzlgIonu1ZAFohbUfa6jErnC3m5PSiRcUBvxIFJ'),
-(8, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$EtNSTPjUEu9xD7YwzSEtnebnqWYcK.kqekFW/24YI1JsIGIYuFgPO', '2021-07-26 23:46:21', 0, 'KB0LmmAvMN19DKlqobJAcs3aNs1ziOd3SWCBJfvAOtJu7VYxtua6561TPWt4'),
-(9, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$TKYu/VbWAjD1/ck8cWQth.TcsuMXgqYIQqHcNAUQqvC.EMuQpWEbu', '2021-07-26 23:47:10', 0, 'tvfKIoyv1c0zBFkDtC5R3K5BIE2pTtmfVGb7ZVwtHJqLCXOrLw59kQ2gdzU9'),
-(10, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$QHOG2IrEsrBS/LfOmo1bweda8FNUH6kl7Ikmfw5pydipG97qdJcuG', '2021-07-26 23:50:42', 0, 'fRdWEY4apwO5KvTQIF8TB8JA6sLJfYgW4RF3tA4w6B1RsJ1ecaGpYHa8TUkn'),
-(11, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$BB/E1D3OroHnXhLRSJ9eeebYSfty8HOUZV7jDSgYUlt9V2rODIEFu', '2021-07-26 23:52:48', 0, 'MReJf0JlYDE3YZJGLxheYyN9U3KCLJdJqenCwQbhUe8KNOTmcaKsYDBhBMwa'),
-(12, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$Qjv.b4U9B1BqKuX05ymHH.xUnLogsSZE1rMQ/upHqD06x2FypRg9O', '2021-07-27 00:14:41', 0, '9s7KPYSUu3Ledb6cE7UAGzZoOnTojRG2tWeQ2mbMdbS1UvJnFi3JsclR7uCn'),
-(13, 'un testeur', 'ngh j', 'Hermannno@gmil.cil', '$2y$10$9SCXVBsoXiCyT/njbiHeUuxw5wZwYQ/O4ldWim1Lg9mZweou0T/8i', '2021-07-27 00:15:17', 0, 'M91IEjPqz37Dg8DFaK7y4UzbSYXHWRXh7vXMKDJb4M9GOuem4Z9kVnFTyTAC'),
-(14, 'hermanno', 'ergdf', 'Hermannno@gmil.cil', '$2y$10$IF7pint0OlsnCO5fVtRClOWTABHuZxFF2PtvgQpxrjz4c3INEXlbG', '2021-07-27 00:20:04', 0, 'rFLOLsv3qww2KeJ2ASVLZ8C3L0IqWVahuCAZvTYuyK7zTMPJzK0fYY1RKWzD'),
-(15, 'hermanno', 'dfdgfdf', 'dfvdf@gmail.vom', '$2y$10$4.VnL5KSykpkfSMq45iHIOOUWr6MqWRGcG0PBZcmhreXrRoOHLTQW', '2021-07-27 00:23:19', 0, 'rHwfpn2mtsD2brvpDcIp996Xqd3xiVs9WMcQpU7G2jQLdszU7I3rCOOlJhCK'),
-(16, 'un testeur', 'ngh j', 'dfgdf@dfgdf', '$2y$10$AA4MKeWfYubvzemKXgJOMeRhBr63HdVII8BIh5bS5/CBtB9naDFDW', '2021-07-27 00:27:25', 0, 'nVvw4lyFumkooI0z3fOlvCqqYl6tLKgDhgTLU04Y5sBwJ9KartoT3hTzRn4I'),
-(17, 'hermes', 'ergdf', 'Hermannno@gmil.cil', '$2y$10$l.zMvkpL.UsrgOD3bJYK5ucwZDz.Wz86dJCqmGoA04b/.bko6zX.u', '2021-07-27 00:32:31', 1, NULL),
-(18, 'clark', 'griffind', 'clarck@gmail.com', '$2y$10$tWnd/QBAngSpH/jxOJzgeevWQdwgYRXnYhHYVgiSB.jS0jpUkj.xy', '2021-07-27 00:42:16', 1, NULL),
-(19, 'jules', 'thief', 'jules@gmail.com', '$2y$10$.FmV/mObbIZpk25eoZR04.cuwn74W5cDlC87ElNpQsF6amFZwA1/K', '2021-07-27 01:05:35', 0, 'EN9nKNmys6tPSv0DrRcF4aG9UabY53Bcjd5QcDuO3SNSDNTGAlOSNKqgMrQd'),
-(20, 'hermanno', 'test', 'Hermanno@gmail.com', '$2y$10$5pz5Ig6winsB9WjO48B3XuvICOlIPEE7lrU2lT0JHjKAfZyQrZKvm', '2021-08-04 14:10:54', 0, '4VCssUwCAnUxQ6NqPC0f0CjzB7E0Ug1weYx7ETQm9ZwH54uTNDkcrQoGDJxK');
+(1, 'admin', 'SuperUser', 'superuser@gmail.com', '$2y$10$82QdFNryqwnIrsJT7Y.IeezcfZdLHDtHZJQX5p9B2y0xhofOjAxOa', '2021-08-25 09:52:04', 1, NULL),
+(2, 'teste', 'teste', 'test@gmail.com', '$2y$10$vayWeb8RJi9JyID2DsYw1OOGUlcKhpJ08eyG5XdgVXll8ZAib1lrG', '2021-08-25 09:56:09', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -160,7 +143,7 @@ INSERT INTO `visits` (`id`, `pageName`, `ip`, `date`, `nb`) VALUES
 (7, '/beamtenversicherung-vkb/about.php', '::1', '2021-05-19 04:43:09', 2),
 (8, '/beamtenversicherung-vkb/datenschutz.php', '::1', '2021-05-19 04:44:26', 1),
 (9, '/beamtenversicherung-vkb/Krankenversicherung.php', '::1', '2021-05-19 05:21:08', 1),
-(10, '/beamtenversicherung-vkb.de/index.php', '::1', '2021-08-05 16:46:21', 6),
+(10, '/beamtenversicherung-vkb.de/index.php', '::1', '2021-08-25 08:46:53', 7),
 (11, '/beamtenversicherung-vkb.de/Wunsche.php', '::1', '2021-08-05 14:58:06', 4),
 (12, '/beamtenversicherung-vkb.de/about.php', '::1', '2021-08-05 16:44:26', 3),
 (13, '/beamtenversicherung-vkb.de/Krankenversicherung.php', '::1', '2021-08-05 14:52:32', 4),
@@ -209,7 +192,7 @@ ALTER TABLE `mails_sent`
 -- AUTO_INCREMENT pour la table `superusers`
 --
 ALTER TABLE `superusers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `testimonial`

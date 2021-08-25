@@ -23,6 +23,14 @@
     - design de la page d'acceuil de l'administration
 
 
+IMPORTANT : 
+    - paramettres de connxion à l'administration : 
+        - LOGIN : "superuser@gmail.com"
+            - MDP : "superuser"
+        - LOGIN : "test@gmail.com"
+            - MDP : "superuser"
+
+
 heures de travail (concernant les corrections  et l'ajout du systeme d'admin) :
     - Hermann :  29 h (total) 
              
