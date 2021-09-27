@@ -24,5 +24,13 @@
 
 
 heures de travail (concernant les corrections  et l'ajout du systeme d'admin) :
-    - Hermann :  29 h (total) 
-             
+    - Hermann :  29 h (total)
+    ---------------------------------------------------------------------------------------------------------------------
+                                         KORREKTUR FÜR DEN 25.SEPTEMBER
+
+    - corriger le texte de la page About
+    - retirer le bouton Angebot einholen de la page Krankenversicherung
+    - les textes du testimonial ne s'affichent pas completement
+    - certains textes ne s'affichent pas lorsqu'on hover dessus
+    -
+    -
