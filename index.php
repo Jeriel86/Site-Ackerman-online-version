@@ -87,8 +87,8 @@ include "traitements/testimonialForm.php";
           <div class="carousel-item-description justify-content-center p-0 m-0 w-100">
             <div class="mt-4 p-0">
               <ul class="txt p-0 w-75 m-auto">
-                <h4>Du bist noch ein/e Student/in?</h4>
-                <span>Dann informiere dich jetzt schon über die notwendige Absicherung für heute und morgen</span>
+                <h4>Sie sind noch ein/e Student/in?</h4>
+                <span>Dann informieren Sie sich jetzt schon über die notwendige Absicherung für heute und morgen</span>
               </ul>
             </div>
           </div>
@@ -110,7 +110,6 @@ include "traitements/testimonialForm.php";
 
         <!------------------------------------------------------------------ Section 1: Leistungen -------------------------------------------------------->
     <section class="leistung">
-      <h1 class="text-center fw-bold mt-5">Ihr Online-Versicherungsbüro</h1>
       <p>
         <h5 class="text-center mt-5">Unsere Leistungen für Sie</h5>
       </p>
@@ -170,8 +169,7 @@ include "traitements/testimonialForm.php";
 
     <section style="background-color:rgb(166,166,166);">
         <p>
-        <h5 class="text-center mt-5">Wählen Sie Ihren Berufsstatus
-        </h5>
+        <h5 class="text-center mt-5">Bitte wählen Sie Ihren Berufsstatus und erstellen Sie Ihr eigenes Angebot</h5>
         </p>
         <div class="container">
             <div class="ligne px-5 px-sm-1">
@@ -213,7 +211,7 @@ include "traitements/testimonialForm.php";
                     </button>
                     <ul class="dropdown-menu  text-start " aria-labbeledby="check">
                         <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="#">▪ Prüfung Ihres aktuellen Versicherungsstatus</span></li>
-                        <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="#">▪  Anpassung der Höhe Ihrer Dienstunfähigkeitsversicherung</a></li>
+                        <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="#">▪  Anpassung der Höhe Ihrer Dienstunfähigkeitsversicherung</span></li>
                         <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="Die private Unfallversicherung zahlt bei Unfällen, die nicht nur auf der Arbeit passieren, sondern wir bieten einen weltweiten Schutz, der 24h gilt, die auch in Ihrer Freizeit passieren können.Unfallschutz mit Beitragrückzahlung Sie haben die Möglichkeit einen zuverlässigen Unfallschutz mit Geld-Zurück-Garantie für Sie und Ihre Familie, Kinder oder Angehörige zu sichern. Am Ende der Laufzeit erhalten Sie die vereinbarte Summe garantiert. Außerdem haben Sie die Möglichkeit auf Überschussbeteiligung.">▪ private Unfallversicherung</span></li>
                         <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="Lebensstandard Gibt es etwas, worauf Sie in der Zukunft verzichten würden? Ohne Schutz z.B. Dienstunfähigkeits- oder Unfallversicherung würden Sie als Beamter aufgrund eines Freizeitunfalls oder einer Erkrankung keine finanzielle Unterstützung vom Staat erhalten.">▪ Lebensstandard</span></li>
                         <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="#">▪  Vermögen</span></li>
@@ -351,21 +349,50 @@ include "traitements/testimonialForm.php";
               </div>
           </section>
         </div>
-        <div class="container mt-5">
-                <h5 class="text-center">Ihre Meinung ist uns wichtig !</h5>
-                <form class="my-form border border-2 border-secondary p-4 mt-2 rounded rounded-5 shadow shadow-lg" action="traitements/testimonialForm.php" method="POST">
-                    <div class="form-group fw-bold">
-                        <label for="form-name">Name:</label>
-                        <input type="text" class="form-control" id="form-name" name="name" pseudoceholder="Name" value="<?php if(isset($name)){echo $name;} ?>" required="required">
-                    </div><div class="form-group fw-bold">
-                        <label for="form-message">Rezension </label>
-                        <textarea class="form-control" id="form-message" name="message"  value="<?php if(isset($message)){echo $message;} ?>"  required="required"></textarea>
+        <!-------------------------------Kontakt-------------------------------->
+        <section id="kontakt">
+            <div class="container ">
+                <div><h3 class="text-center fw-bold">So finden Sie uns</h3></div>
+                <br />
+                <div class="row gy-4 align-items-center">
+                    <div class="col ratio ratio-4x3 text-md-center border border-2 border-secondary p-4 rounded rounded-5" >
+                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.373458550927!2d8.1699057!3d49.4585578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47963765e0aebf29%3A0xf69a61bb771eee31!2sWeinstra%C3%9Fe%20S%C3%BCd%2020%2C%2067098%20Bad%20D%C3%BCrkheim!5e0!3m2!1sen!2sde!4v1618574946995!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <button class="btn btn-primary mt-1 btn-lg" type="submit">Senden</button>
-                </form>
+                    <br />
+                    <div class="col-md-6 ">
+                        <form class="my-form border border-2 border-secondary p-4 rounded rounded-5 shadow shadow-lg" action="traitements/aboutForm.php" method="POST">
+                            <div class="form-group fw-bold">
+                                <label for="form-name">Name:</label>
+                                <input type="text" class="form-control" id="form-name" name="name" placeholder="Name" value="<?php if(isset($name)){echo $name;} ?>" required="required">
+                            </div>
+                            <div class="form-group fw-bold">
+                                <label for="form-email">Ihre Email:</label>
+                                <input type="email" class="form-control" id="form-email" name="mail" placeholder="Email Adresse" value="<?php if(isset($mail)){echo $mail;} ?>"  required="required">
+                            </div>
+                            <div class="form-group fw-bold">
+                                <label for="form-subject">Telefon:</label>
+                                <input type="phone" class="form-control" id="form-subject" name="telefon" placeholder="Nummer" value="<?php if(isset($telefon)){echo $telefon;} ?>"  required="required">
+                            </div>
+                            <div class="form-group fw-bold">
+                                <label for="form-message">Ihre Nachricht:</label>
+                                <textarea class="form-control" id="form-message" name="message" placeholder="Nachricht"  required="required"><?php if(isset($message)){echo $message;} ?></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 m-1">
+                                    <input type="checkbox" class="f" name="datenschutz" id="datenschutz" style="width: auto; margin-bottom: 0px;" required='required'>
+                                </div>
+                                <div class="col-md-8 m-1">
+                                    <label for="datenschutz">Ich habe die Datenschutzerklärung gelesen und bin damit einverstanden</label>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary mt-1 " type="submit">Senden</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-1"></div>
-        </div>
+
+        </section>
+
     </section>
 
 

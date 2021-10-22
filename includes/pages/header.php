@@ -57,6 +57,10 @@
           <li class="nav-item">
             <a class="nav-link" href="about.php">Über Uns</a>
           </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php#kontakt">Kontakt</a>
+            </li>
+
         </ul>
       </div>
     </div>

@@ -5,7 +5,7 @@
      include "includes/pages/header.php" ?>
     <div class="container w-100 ">
         <h3 class="mt-5 text-center">Erstellen Sie Ihr individuelles Angebot für Ihre private
-            Krankenversicherung/Beihilfe:</h3>
+            Krankenversicherung/Anwartschaftsversicherung:</h3>
         <form action="traitements/KrankenversicherungForm.php" method="POST"  id="regForm" >
             <div class="tab"> <h4>Wer soll das Angebot erhalten ?</h4> <hr style="height: 5px; width: 30%; background-color:#ff5e14;">
                 <div class="row">
@@ -49,8 +49,8 @@
             </div>
 
             <div class="tab"> <h4>Derzeitiger Berufstatus</h4> <hr style="height: 5px; width: 30%; background-color:#ff5e14;">
-                <div class="formBloc_BTN Berufstatus" onclick="setInput('Beamte', 'Berufstatus', 'formBloc_BTN Berufstatus'), setfield('Beamte')" onmouseover="annimationFormBlocBTNOver('Beamte')" onmouseout="annimationFormBlocBTNOut('Beamte', 'Berufstatus')" id="Beamte" >Beamte/r</div>
-                <div class="formBloc_BTN Berufstatus" onclick="setInput('Beamtenanwarter', 'Berufstatus', 'formBloc_BTN Berufstatus'), setfield('Beamtenanwarter')" onmouseover="annimationFormBlocBTNOver('Beamtenanwarter')" onmouseout="annimationFormBlocBTNOut('Beamtenanwarter', 'Berufstatus')" id="Beamtenanwarter">Beamtenanwärter</div>
+                <div class="formBloc_BTN Berufstatus" onclick="setInput('Beamte', 'Berufstatus', 'formBloc_BTN Berufstatus'), setfield('Beamte')" onmouseover="annimationFormBlocBTNOver('Beamte')" onmouseout="annimationFormBlocBTNOut('Beamte', 'Berufstatus')" id="Beamte" >Beamtin/er</div>
+                <div class="formBloc_BTN Berufstatus" onclick="setInput('Beamtenanwarter', 'Berufstatus', 'formBloc_BTN Berufstatus'), setfield('Beamtenanwarter')" onmouseover="annimationFormBlocBTNOver('Beamtenanwarter')" onmouseout="annimationFormBlocBTNOut('Beamtenanwarter', 'Berufstatus')" id="Beamtenanwarter">Beamtenanwärterin/er</div>
                 <div class="formBloc_BTN Berufstatus" onclick="setInput('Referendar', 'Berufstatus', 'formBloc_BTN Berufstatus'), setfield('Referendar')" onmouseover="annimationFormBlocBTNOver('Referendar')" onmouseout="annimationFormBlocBTNOut('Referendar', 'Berufstatus')" id="Referendar">Referendar</div>
                 <input type="text" class="form-control" id="Berufstatus_others" placeholder="Ausgeübte Tatigkeit" onblur="copyInput('Berufstatus_others', 'Berufstatus')" style="width:97%" oninput="this.className = 'valid'"> 
                 <script> function copyInput(actual, cible){
@@ -196,7 +196,7 @@
                             <label for="newsletter">Ich möchte Informationen und Neuerungen über die Newsletter erhalten </label>
                         </div>
                     </div>
-                    <input type="submit" class=" btn btn-primary mb-5 " href="#" role="button" value="Angebot einholen"> <br>
+                   <!-- <input type="submit" class=" btn btn-primary mb-5 " href="#" role="button" value="Angebot einholen"> <br> -->
                 </div>
             </div>
 
