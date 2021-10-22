@@ -59,7 +59,7 @@
     </div>
     <div class="footer-social-icon text-center mb-4">
       <span class="text-dark">Follow us</span>
-      <a href="https://www.instagram.com/agentur_ackermann/"><i class="fab fa-instagram instagram-bg"></i></a>
+      <a href="https://www.instagram.com/sa_beamtenversicherung/"><i class="fab fa-instagram instagram-bg"></i></a>
 
     </div>
     <div class="copyright-area mt-2">
