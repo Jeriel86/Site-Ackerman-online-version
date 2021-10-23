@@ -315,13 +315,10 @@ include "traitements/testimonialForm.php";
                               continue;
                               } ?>
                             <div class="col-10 col-md-6 col-lg-6 col-xl-4  text-center m-auto p-4 h-100  ">
-                                <button class="bt text-light bt1 p-2 h-75 w-100 " style="overflow:hidden;">
-                                    <span class="h1">“</span> <?php  if (strlen($testimonials[$i][$j]["content"]) <= 200  ) {
+                                <button class="bt text-light bt1 p-2 h-75 w-100 " style="overflow:auto;">
+                                    <span class="h1">“</span> <?php 
                                                 echo nl2br($testimonials[$i][$j]["content"]);
-                                              }else{
-                                                echo substr($testimonials[$i][$j]["content"], 0, 200);
-                                                echo "...";
-                                              }  ?> <br> 
+                                             ?> 
                                     <span class="h1">„</span> 
                                 </button>
                                 <div class="col-md-12 text-center">

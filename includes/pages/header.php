@@ -41,7 +41,7 @@
   <nav class="navbar navbar-expand-md navbar-light bg-light menu p-2">
     <div class="container" >
       <div>
-        <a href="index.php"><img class="logo" src="assets/bilder/logo.png " style="width: 150px; height: auto;"></a>
+        <a href="index.php" class="d-flex  align-items-center text-decoration-none "><img class="logo align-middle" src="assets/bilder/logo.png " style="width: 150px; height: auto;"> <div class="d-flex flex-column h4 text-dark"><span>Sascha Ackermann</span><span>Ihre   Beamtenberatung</span></div></a>
       </div>
       <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
