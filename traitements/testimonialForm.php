@@ -21,8 +21,10 @@ else{
         $i = 0; $compt1 = 0; $compt2 = 0;
         while($i< count($Fetch_testimonials)){
             for($j=0; $j<3; $j++){
-                $testimonials[$compt1][$j] = $Fetch_testimonials[$compt2];
-                $compt2++;
+                if($compt2 < count($Fetch_testimonials)){
+                    $testimonials[$compt1][$j] = $Fetch_testimonials[$compt2];
+                    $compt2++;
+                }
             }
             $i = $i+3; $compt1++;
         }
