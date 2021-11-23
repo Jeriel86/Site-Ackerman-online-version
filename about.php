@@ -1,44 +1,25 @@
 <?php
     session_start();
+    ini_set('error_reporting', E_ALL);
+    ini_set( 'display_errors', 1 );
     $pagename = "about";
     $pageStyles= "<link rel='stylesheet' href='assets/css/about.css'>"; //balise pour ajouter un fichier CSS propre à cette page 
-     include "includes/pages/header.php" ?>
+    include "includes/pages/header.php";
+    $page = "Über Uns";
+    include ("traitements/functions.php");
+    $db = db_connection("traitements/secure/DataBaseCredentials.php");
+    ?>
     </div>
 
     <div class="container">
-    <section>
-      <div class="container">
-        <h2 class="mt-5 text-center fw-bold">Generalagentur Sascha Ackermann</h2>
-        <div class=" p-3 mt-5 float-end">
-          <img width="400px" height="auto" class="img-fluid img-thumbnail" src="assets/bilder/Team.jpg">
-        </div>
-        <div class="container mt-5 float-sart">
-          <p> Wir sind das Team der Generalagentur Sascha Ackermann und sind seit Jahren der Ansprechpartner vieler Kunden, wenn es um den Versicherungsbereich geht.</p>
-          <p>Die Versicherungskammer Bayern Versicherungsanstalt des öffentlichen Rechts ist ein Personen- und
-              Sachversicherer. Wir betreuen Privatkunden, Landwirte, Firmen, kommunale Gebietskörperschaften sowie
-              öffentlich-rechtliche Institutionen und bieten ein umfangreiches Angebot an unseren Dienstleistungen und
-              Versicherungsprodukten, z.B. Lebensversicherung, private Kranken- und Pflegeversicherung sowie Unfall- und
-              Schadenversicherung.</p>
-          <p> Wir sind auf unterschiedliche Berufsbranchen spezialisiert. Auch für nicht berufsspezifische Versicherung, wie
-              Kraftfahrtversicherung, Rechtsschutz und Wohngebäudeversicherung sind wir ein professioneller
-              Ansprechpartner.</p>
-          <p>Auch in schwierigen Zeiten unserer Kunden sind wir für sie da. Wir begleiten unsere Kunden bei ihrer
-              persönlichen sowie beruflichen Entwicklung und beraten unsere Kunden in jeder Lebensphase und passen die
-              Produkte dem Wunsch und der Lebensphase des Kunden an.</p>
-          <p>Wir freuen uns Sie kennenzulernen. Bei uns sind Sie keine Kundennummer, wir lernen unsere Kunden und ihre kennen. Lassen Sie sich davon überzeugen! Wir freuen uns auf Sie!</p>
-        </div>
-
-
-
-
-
-
-
-
-
-      </div>
-    </section>
-    
+    <?php 
+        $req = $db->query("SELECT * FROM editable_section WHERE id_editable_page in  (SELECT id FROM editable_page WHERE title = '$page') ORDER BY rank_in_page");
+        $editable_sections = $req->fetchAll();
+        foreach ($editable_sections as $section){?> 
+            <section class="" id="<?php echo $section["name"] ?>">
+              <?php echo $section['source_code'] ?>
+            </section>
+    <?php } ?> 
     <section>
       <div class="container text-center">
         <h3 class="mt-2 fw-bold">Für Sie zertifiziert und ausgezeichnet </h3>

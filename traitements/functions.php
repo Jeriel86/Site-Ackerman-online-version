@@ -13,7 +13,7 @@ function db_connection($credential_path)
 }
 
 /**/ 
-function save_mail_sent( $source = Null, $dest, $subject, $message, $source_form)
+function save_mail_sent( $dest, $subject, $message, $source_form, $source = Null)
 {
     $db = db_connection('../traitements/secure/DataBaseCredentials.php');
     $req = $db->prepare('INSERT INTO mails_sent (source, destination, subject, message, source_form) VALUES(?, ?, ?, ?, ?)');

@@ -25,11 +25,37 @@
             <tr>
                     <td> <?php echo $suscriber['date'] ?> </td>
                     <td> <a href="mailto:<?php echo $suscriber['email'] ?>"><?php echo $suscriber['email'] ?></a> </td>
-                    <td> <a href="" class ='btn btn-danger'>delete suscriber</a>
+                    <td> 
+                    <button class="btn btn-sm btn-outline-danger" onclick="deleter(<?php echo $suscriber['id']?>)" data-bs-toggle="modal" data-bs-target="#descriptionBloc1">Delete</button>
                     </td>
             </tr>
             <?php  }  ?>
         </tbody>
     </Table>
+    <!-- Modal pour Confirmer la suppression -->
+<script>  
+ function deleter(id){
+    $('#btnDeleteContainer').html("<a href='components/parts/modules/treatement/_manage_users.php?id="+id+"&action=delete&cible=suscribers' class='btn btn-danger'>Confirm</a>")
+ }
+</script>  
+
+<div class="modal fade text-dark "   id="descriptionBloc1" data-backdrop="static" data-keyboard="false" tabindex="-1"  aria-hidden="true">
+<div class="modal-dialog  modal-dialog-centered modal  modal-dialog-scrollable">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title"> 
+            Are You sure you want to <span class="text-danger">delete</span> this user ?
+        </h5>
+    </div>
+    <div class="modal-body">
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-secondary " data-bs-dismiss='modal'>Cancel</button>
+            <span id="btnDeleteContainer"></span>
+            
+        </div>
+    </div>
+    </div>
+</div>
+</div>
     </div>
 </div>

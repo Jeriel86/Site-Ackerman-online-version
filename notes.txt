@@ -1,0 +1,3 @@
+un client est considéré comme nouveau vsiteur: 
+    - a sa premiere visite sur une page 
+    - lorsu'il recharge la meme pasge apres un delai de 6h

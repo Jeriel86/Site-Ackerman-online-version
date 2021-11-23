@@ -16,7 +16,7 @@ else{
         //connection à la base de donnée
         include ("functions.php");
         $db = db_connection("secure/DataBaseCredentials.php");
-        $responce = $db->query('SELECT * FROM  testimonial  ORDER BY id DESC LIMIT 9');
+        $responce = $db->query('SELECT * FROM  testimonial WHERE approved = 1 ORDER BY id DESC LIMIT 9');
         $Fetch_testimonials = $responce->fetchAll();
         $i = 0; $compt1 = 0; $compt2 = 0;
         while($i< count($Fetch_testimonials)){

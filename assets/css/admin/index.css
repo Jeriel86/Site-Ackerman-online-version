@@ -2,8 +2,11 @@ a {
     text-decoration: none;
 }
 .side-nav a:hover{
-    background-color: rgba(25, 223, 223, 0.856);
+    background-color: rgba(12, 79, 179, 0.856);
 }
 .side-nav a.active{
-    background-color: #0dcaf0!important;
+    background-color: rgb(13, 53, 114) !important;
+}
+p{
+    color: rgba(33, 149, 243, 0.573);
 }

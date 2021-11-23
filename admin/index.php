@@ -3,7 +3,8 @@ session_start();
     if (!isset($_SESSION['auth']) || empty($_SESSION['auth']) || $_SESSION['auth'] == NULL ){
         header("location: auth/");
     }
-    $pageStyles= "<link rel='stylesheet' href='../assets/css/admin/index.css'>"; //balise pour ajouter un fichier CSS propre à cette page 
+    $pageStyles= "<link rel='stylesheet' href='../assets/css/admin/index.css'>"; //balise pour ajouter un fichier CSS propre à cette page
+    $pagename = "Adminstration"; 
     include "components/parts/header.php";
     try {
         include('../traitements/secure/DataBaseCredentials.php'); //vu qu'on y accede depuis l'emplacement cette page
@@ -22,20 +23,39 @@ session_start();
                 include 'components/parts/sideBar.php';
             ?>
         </div>
-        <div class="col-10  p-0 overflow-auto">
-            <div class="nav  bg-light d-flex justify-content-between px-4 py-1">
+        <div class="col-10 bg-light p-0 overflow-auto">
+            <div class="nav  bg-secondary d-flex justify-content-end px-4 py-3">
+            <!--
                 <div clas="nav-item p-auto m-auto">
                     <form action="" method="get" class="p-auto m-auto d-flex p-0 m-0">
                         <input type="search" name="search" id="searchinput" placeholder="type something here..." class=" p-auto m-auto nav-link ">
                         <button type="submit" class="rounded-0 btn btn-primary">search</button>
                     </form>
                 </div>
-                <div class="d-flex justify-content-between">
-                    <a href="auth/?display" class="circle rounded-circle bg-success text-white nav-link mx-3 h4"><?php echo substr($_SESSION['auth']['name'], 0, 1) ?></a>
-                    <a href="auth/logout" class="circle rounded-circle bg-danger text-white bold  nav-link h4"><b> &cross;</b> </a>
+            -->
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <div class="btn-group pointer" role="button">
+                        <span class="dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>
+                            <small class="text-capitalize">
+                                <?php echo $_SESSION['auth']['name']?>
+                            </small>
+                        </span>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <small>
+                                <li>
+                                    <a href="auth/?display" class="dropdown-item circle "><i class="fas fa-user-circle"></i> Profile</a>
+                                </li>
+                                <li>
+                                    <a href="auth/logout" class="dropdown-item text-danger"> <i class="fas fa-power-off"></i> Log Out </a>
+                                </li>
+                            </small>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container bg-light">
                 <?php  
                     if (!isset($_GET['cible']) || $_GET['cible'] == 'stats' ){
                         include 'components/parts/modules/statistics.php'; 
@@ -52,6 +72,8 @@ session_start();
                             include 'components/parts/modules/manage_content.php';
                         }elseif( $_GET['cible'] == 'manage_admins' ){ // si il veut gerer les administrateurs du site    
                             include 'components/parts/modules/manage_admins.php';
+                        }elseif( $_GET['cible'] == 'testimonials' ){ // si il veut gerer les administrateurs du site    
+                            include 'components/parts/modules/manage_testimonials.php';
                         }else { //dans le cas où on recontre quelque chose qu'on a pas prévu ici, on le redirige vers la page d'acceuil de l'administration
                             header("location: ."); // hop comme un pro !
                         }
@@ -64,5 +86,9 @@ session_start();
     </div>
 </div>
 </body>
-<?php    ?>
+
+
+<?php
+    //include "components/parts/footer.php";
+?>
 </html>
