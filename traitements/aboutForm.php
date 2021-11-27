@@ -64,7 +64,7 @@ if (isset($_POST) && !empty($_POST)) { //si la variable $_POST existe et n'est p
         $messageFlash['type'] = "danger";
         $_SESSION['messageFlash'] = $messageFlash;
 
-        header('location: ../about.php#kontakt');
+        header('location: ../index.php#kontakt');
         
     }
 }

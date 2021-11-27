@@ -433,3 +433,10 @@ ul {
 }
 
 q {font-style: italic;}
+
+.btn-gewinnspiel{
+  padding: 0;
+  height: 170px;
+  overflow: hidden;
+  transform: rotate(-25deg);
+}

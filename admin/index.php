@@ -4,6 +4,14 @@ session_start();
         header("location: auth/");
     }
     $pageStyles= "<link rel='stylesheet' href='../assets/css/admin/index.css'>"; //balise pour ajouter un fichier CSS propre à cette page
+    
+    if (isset($_GET['cible'])){
+        if( $_GET['cible'] == 'manage_content' ){ // si il veut gerer les administrateurs du site    
+            $pageStyles.= "<link rel='stylesheet' href='../assets/css/index.css'>"; //balise pour ajouter un fichier CSS propre à cette page
+            $pageStyles.= "<link rel='stylesheet' href='../assets/css/about.css'>"; //balise pour ajouter un fichier CSS propre à cette page
+        }
+
+    } 
     $pagename = "Adminstration"; 
     include "components/parts/header.php";
     try {

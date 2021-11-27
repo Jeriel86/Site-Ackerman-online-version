@@ -33,7 +33,7 @@
                     
                     ?> 
                     
-                    <div class="col-md-2 btn btn-success mx-2 " onclick="loadFormEditableSection('<?php echo $section['id'] ?>')" ><?php echo $section['name'] ?></div>                    
+                    <div class="col-md-2 btn btn-success m-1 " onclick="loadFormEditableSection('<?php echo $section['id'] ?>')" ><?php echo $section['name'] ?></div>                    
                 <?php }?> 
             </div>
             <div class="text-info">

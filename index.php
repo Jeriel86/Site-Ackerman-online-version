@@ -8,397 +8,69 @@ include "traitements/testimonialForm.php";
 ?>
 <link rel="shortcut icon" href="assets/logo/favicon.png" type="image/x-icon">
   <!-- Créer un carousel -->
+  <?php 
+        $req = $db->query("SELECT * FROM editable_section WHERE id_editable_page in  (SELECT id FROM editable_page WHERE title = '$pagename') ORDER BY rank_in_page");
+        $editable_sections = $req->fetchAll();
+        foreach ($editable_sections as $section){?> 
+            <section class="" id="<?php echo $section["name"] ?>">
+              <?php echo eval("?>".$section['source_code']."<?") ?>
+            </section>
+    <?php } ?> 
 
-  <section class="bg-light">
-    <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-          aria-label="Slide 4"></button>
-      </div>
-      <div class="carousel-inner slider justify-content-center">
-        <div style="position: absolute;height:92px;top:0px;" class="m-carousel bg-light">
-        </div>
-        <div class="carousel-item active">
-          <div class="responsive-bg w-100 h-100"
-            style="background: url('assets/bilder/image1.jpg') no-repeat; background-size: cover; background-position:center center ;">
+    <!--Section 5 : popup-->
+  <section>
+    <div class="modal fade text-dark " id="homePopUp" data-backdrop="static" data-keyboard="false" tabindex="-1"  aria-hidden="true">
+      <div class="modal-dialog modal-dialog  modal-dialog-centered modal  modal-dialog-scrollable">
+        <div class="modal-content bg-transparent border-0 " style="overflow: visible;">
+          <div class="modal-header border-0 p-1  bg-info">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="updateVisit()"></button>
           </div>
-          <div class="overlay"></div>
-          <div class="carousel-item-description justify-content-center carou w-100 p-0 m-0">
-            <div class="mt-4 p-0">
-              <ul class="txt  p-0  w-75 m-auto">
-              <h4 class="">Willkommen bei der Generalagentur Sascha Ackermann</h4>
-                <li>Wir möchten Sie als <span class="fst-italic fw-bold">Menschen kennenlernen.</span></li>
-                <li>Wir <span class="fst-italic fw-bold">helfen</span> Ihnen bei den
-                  ersten Schritten als Beamter.</li>
-                <li>Wir <span class="fst-italic fw-bold">betreuen</span></betreuen> Sie <span
-                    class="fst-italic fw-bold">deutschlandweit</span> und während Ihrer ganzen Laufbahn.</li>
-                <li>In jedem <span class="fst-italic fw-bold">Versicherungsaspekt</span> sind wir für Sie da !</li>
-              </ul>
-            </div>
+          <div class="modal-body pt-0  bg-info">
+            <h3 class="modal-title text-center">Gute Gründe für uns</h3>
+            <ul class="p-4">
+              <li class="p-1">Kompetente, individuelle und persönliche Beratung</li>
+              <DIV class="mx-4">
+                <li class="p-1 mx-5">Bundesweite, langfristige Betreuung</li>
+              </DIV>
+              <li class="p-1">Hoher Qualitäts- und Serviceanspruch</li>
+            </ul>
           </div>
-
-        </div>
-        <div class="carousel-item">
-          <div class="responsive-bg w-100 h-100"
-            style="background-image: url('assets/bilder/image2.jpg'); background-size: cover; background-position:center center;">
+          <div class="modal-footer py-5 p-0 border-0  bg-info" style="overflow: visible;">
+            <a href="" class=" p-0 position-absolute btn-gewinnspiel text-dark " style="z-index: 80;" onclick="updateVisit()"> 
+              <div class="position-relative" style="width: 350px;">
+                <div class="position-absolute " style="top:-50px; left: -30px" >
+                  <img src="assets/bilder/bg-alert2.png" alt="" width="400px" height="280px">
+                </div>
+                <div class="  px-4 p-5 position-relative d-flex justify-content-center">
+                  <div class="position-absolute " style="z-index: 100; width:230px">
+                    
+                  <small>
+                      <h5 class=" text-center m-0">Gewinnspiel</h5>
+                      Klicke dich durch die Homepage
+                      und nehme am Gewinnspiel teil.
+                      Sichere dir die Chance 
+                      auf einen <b>E-Bike!</b>
+                    </small>
+                  </div>
+                </div>
+                
+              </div>
+            </a>
           </div>
-          <div class="overlay"></div>
-          <div class="carousel-item-description justify-content-center w-100 p-0 m-0">
-            <div class="mt-4 p-0">
-              <ul class="txt p-0 w-75 m-auto">
-                <h4 class="fw-bold"> Ihr Online-Versicherungsbüro</h4>
-                <li>mit Erfahrung und Kompetenz</li>
-                <li>Versicherungsexperten für Beamte</li>
-                <li>in jeder Lebensphase und für jede Lebenslage</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="responsive-bg w-100 h-100 img-fluid"
-            style="background-image: url('assets/bilder/image3.jpg'); background-size: cover; background-position:center center;">
-          </div>
-          <div class="overlay"></div>
-          <div class="carousel-item-description justify-content-center p-0 m-0 w-100 ">
-            <div class="mt-4 p-0 ">
-              <ul class="txt p-0 w-75 m-auto"style="">
-                <h4>Die ersten Schritte in die Zukunft als Student, Lehrer oder Beamter</h4>
-                <li class="mt-2">Wählen Sie Ihren Berufsstatus und </li>
-                <li>erhalten Sie alle notwendigen Informationen.</li>
-                <li>Vereinbaren Sie jetzt einen Termin mit uns.</li>
-                <li>Wir sind persönlich, digital oder telefonisch für Sie da !</li>
-
-              </ul>
-            </div>
-          </div>
-
-        </div>
-        <div class="carousel-item">
-          <div class="responsive-bg w-100 h-100"
-            style="background-image: url('assets/bilder/image4.jpg'); background-size: cover; background-position:center center;">
-          </div>
-          <div class="overlay"></div>
-          <div class="carousel-item-description justify-content-center p-0 m-0 w-100">
-            <div class="mt-4 p-0">
-              <ul class="txt p-0 w-75 m-auto">
-                <h4>Sie sind noch ein/e Student/in?</h4>
-                <span>Dann informieren Sie sich jetzt schon über die notwendige Absicherung für heute und morgen</span>
-              </ul>
-            </div>
-          </div>
-
+          <br> <br>  <br> <br>  <br> <br> 
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </section>
-
-        <!------------------------------------------------------------------ Section 1: Leistungen -------------------------------------------------------->
-    <section class="leistung">
-      <p>
-        <h5 class="text-center mt-5">Unsere Leistungen für Sie</h5>
-      </p>
-      <div class="container contain">
-        <div class="ligne">
-          <div class="colone">
-              <div class="col-md-4 mb-2  align-self-start text-center">
-                  <button type="button" class="button text-light">
-                      Gesundheit und <br> Freizeit
-                  </button>
-              </div>
-              <div class="col-md-4 mb-2 mt-2 align-self-start  text-center">
-                  <button type="button" class="bt text-light bt1 p-4">
-                      Wir bieten <span class="text-warning"> Sonderkonditionen </span> für Beamte und öffentlichen
-                      Dienst-Mitarbeiter in allen privaten Absicherungsformen
-
-                  </button>
-              </div> 
-          </div>
-          <div class="colone">
-              <div class="col-md-4 mb-2  align-self-center text-center">
-                  <button type="button" class="button text-light">
-                      Vorsorge und<br> Vermögen
-                  </button>
-              </div>
-              <div class="col-md-4 mb-2 mt-2  align-self-center text-center">
-                  <button type="button" class="bt text-light bt2 p-3">
-                      Wir begleiten Sie <span class="text-warning"> langfristig</span> und erstellen ein Angebot für Ihre
-                      Dienstunfähigkeitsversicherung, Diensthaftpflichtversicherung, sowie Ihre Altersvorsorge
-                  </button>
-              </div>
-          </div>
-          <div class="colone">
-              <div class="col-md-4 mb-2 align-self-end text-center">
-                  <button type="button" class="button text-light">
-                      KFZ, Haftpflicht<br> und Recht
-                  </button>
-              </div>
-              <div class="col-md-4 mb-2 mt-2 align-self-end text-center">
-                  <button type="button" class="bt text-light bt3 p-3">
-                      Wir erstellen für Sie ein <span class="text-Warning">individuelles</span> und auf Sie zugeschnittenes <span
-                              class="text-Warning">Angebot </span> für die private Krankenversicherung und private Unfallversicherung
-                  </button>
-              </div>
-          </div>
-          </div>
-          <p class="text-center">
-              Individuelle Beratung<span class="text-secondary"> ●</span> auf Ihre Bedürfnisse angepasst <span
-                      class="text-secondary"> ●</span>für Beamtenanwärter und Beamte
-          </p>
-        </div>
-      </div>
-    </section>
-    <!------------------------------------------------------->
-
-    <!--Section 2: Berufsstatus-------------------------------------------------------->
-
-    <section style="background-color:rgb(166,166,166);">
-        <p>
-        <h5 class="text-center mt-5">Bitte wählen Sie Ihren Berufsstatus und erstellen Sie Ihr eigenes Angebot</h5>
-        </p>
-        <div class="container">
-            <div class="ligne px-5 px-sm-1">
-                <div class="colone">
-                    <div class="col-md-4 mb-2 align-self-start text-center">
-                        <a role="button" type="button" class="button-beruf text-dark text-center text-decoration-none"
-                        href="Krankenversicherung.php">
-                            <br> Beamtenanwärter/Referendar
-                        </a>
-                    </div>
-                    <div class=" dropdown col-md-4  align-self-center text-center">
-                        <button type="button" class="button-beruf  text-light  fst-bold bt2 dropdown-toggle dropdown-toggle-split"
-                                data-bs-toggle="dropdown" aria-expanded="false" id="check" style="height: 30px;width: 230px;">
-                            <span class="text-dark">Ihre Checkliste</span>
-                        </button>
-                        <ul class="dropdown-menu  text-start" aria-labbeledby="check">
-                             <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="Haben Sie vor zu einem späteren Zeitpunkt sich privat zu versichern? Dann können Sie bereits jetzt schon Ihren Gesundheitszustand für einen späteren Zeitpunkt für die Aufnahme in die private Krankenversicherung sichern. Sobald Sie dies in Anspruch nehmen möchten und können, ist der Weg in die private Krankenversicherung für Sie frei.">▪ Anwartschaftsversicherung für die private Krankenversicherung </span></li>
-                             <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="Eine kleine Unaufmerksamkeit und der Schaden ist bereits passiert. Man ist gesetzlich verpflichtet der Schaden zu ersetzen. Ihre private Haftpflichtversicherung schützt Sie und Ihr Vermögen vor hohen Entschädigungskosten. Dabei wird die Haftungsfrage geprüft, ob der „Beschädigter“ überhaut einen Anspruch auf Schadenersatz hat. Wir regulieren den Schaden und den Schadenersatz. Ebenfalls wehren wir unberechtigte Forderungen ab.">▪ Private Haftpflichtversicherung </span></li>
-                             <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="Ein Dienstherr möchte langfristig, am besten bis zum Rentenalter die Beamten beschäftigen. Dabei spielt die Gesundheit eine  wichtige Rolle. Chronische oder psychische Erkrankungen, sowie das Übergewicht und Ihr allgemeines Gesundheitszustand werden von einem Amtsarzt überprüft.">▪ Gesundheitsprüfung </span></li>
-                             <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="">▪ Prüfung anstehender Versicherungen</span></li>
-                            <div class="dropdown-divider"></div>
-                            <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="Beihilfe ist die Leistung des Dienstherrn. Dabei werden die Kosten für Krankheits-, Geburts-, Pflege- und Todesfall übernommen. Beamten und Ihre Angehörige haben Anspruch auf Beihilfe. Die Kostenerstattung berechnet sich anhand dem persönlichen Bemessungssatz (50,70 oder 80%).  Der restliche Anteil (50,30 oder 20%)  werden durch die private Krankenversicherung abgedeckt. z.B. die Leistungen eines (Zahn-) Arztes oder eines Psychotherapeuten sind beihilfefähig.">▪  Beihilfe und private Krankenversicherung</span></li>
-                            <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="Jeder vierte wird in Deutschland berufsunfähig. Die häufigste Ursache dafür sind die psychischen Erkrankungen. Wenn Sie ihr aktuell ausgeübte Tätigkeit für 6 Monate nicht ausüben können und der Grund dafür lieg in Ihrer gesundheitlichen Verfassung, dann bekommen Sie die vereinbarte Rente für die Dauer der Berufsunfähigkeit ausgezahlt. Dienstunfähigkeitsklausel Die vereinbarte Rente erhalten Sie, wenn Sie berufsunfähig oder dienstunfähig werden. Die Dienstunfähigkeitsversicherung dient dazu, wenn Sie aus gesundheitlichen Gründen ihrer Diensttätigkeit aufgrund Ihres Gesundheitszustandes nicht mehr ausüben können und somit in den Ruhestand versetzt oder aus dem Beamtenverhältnis entlassen werden">▪  Berufsunfähigkeitsversicherung mit Dienstunfähigkeitsklausel</span></li>
-                            <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="Dies ist eine wichtige Ergänzung für die private Haftpflichtversicherung.Dabei werden berechtigte Schadenersatzansprüche, die aufgrund eines Schadens während Ihrer beruflichen Tätigkeit  passiert sind, abgedeckt.">▪  Amts- und Diensthaftpflichtversicherung</span></li>
-                            <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="Dies gehört ebenfalls als eine wichtige Ergänzung zur privaten Haftpflichtversicherung und hat hohe Priorität, z.B. bei Lehrer und Richter">▪  Schlüsselverlustversicherung</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="colone">
-                    <div  class="col-md-4 mb-2 align-self-center text-center">
-                    <a role="button" type="button" class="button-beruf-1 text-dark text-center text-decoration-none" href="Krankenversicherung.php">
-                       <br>Beamte
-                    </a>
-                    </div>
-                    <div class=" dropdown col-md-4  align-self-center text-center align-items-center">
-                    <button button type="button" class="button-beruf-1  text-light  fst-bold bt2  dropdown-toggle dropdown-toggle-split"
-                            data-bs-toggle="dropdown" id="check" style="height:30px;width: 230px;">
-                        <span class="text-dark">Ihre Checkliste</span>
-                    </button>
-                    <ul class="dropdown-menu  text-start " aria-labbeledby="check">
-                        <li><span class="dropdown-item" href="#"  data-toggle="tooltip"  title="#">▪ Prüfung Ihres aktuellen Versicherungsstatus</span></li>
-                        <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="#">▪  Anpassung der Höhe Ihrer Dienstunfähigkeitsversicherung</span></li>
-                        <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="Die private Unfallversicherung zahlt bei Unfällen, die nicht nur auf der Arbeit passieren, sondern wir bieten einen weltweiten Schutz, der 24h gilt, die auch in Ihrer Freizeit passieren können.Unfallschutz mit Beitragrückzahlung Sie haben die Möglichkeit einen zuverlässigen Unfallschutz mit Geld-Zurück-Garantie für Sie und Ihre Familie, Kinder oder Angehörige zu sichern. Am Ende der Laufzeit erhalten Sie die vereinbarte Summe garantiert. Außerdem haben Sie die Möglichkeit auf Überschussbeteiligung.">▪ private Unfallversicherung</span></li>
-                        <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="Lebensstandard Gibt es etwas, worauf Sie in der Zukunft verzichten würden? Ohne Schutz z.B. Dienstunfähigkeits- oder Unfallversicherung würden Sie als Beamter aufgrund eines Freizeitunfalls oder einer Erkrankung keine finanzielle Unterstützung vom Staat erhalten.">▪ Lebensstandard</span></li>
-                        <li><span class="dropdown-item" href="#" data-toggle="tooltip"  title="#">▪  Vermögen</span></li>
-                        <li><span class="dropdown-item" href="#" data-toggle="tooltip"> ▪  Ihre Checkliste zum <a href="pdf/Checkliste%20Beamte.pdf" download="Gesundheitsfragen.pdf">Download</a></span></li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="colone1">
-                    <div class="col-md-4 mb-2 align-self-end">
-                        <a role="button" type="button" class="button-beruf-2 text-dark text-center text-decoration-none "
-                        href="Wunsche.php?source=index_Angestellter">
-                            <br>Angestellter
-                        </a>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!----------------------------------------------------------------Section 3: Gute Gründe -->
-    <section class="gründe" >
-        <p>
-        <h5 class="text-center mt-5">Gute Gründe für Agentur Sascha Ackermann </h5>
-        </p>
-        <div class="container">
-            <div class="ligne">
-                <div class="colone">
-                    <div class="col-md-4 mb-2 align-self-start text-center">
-                        <button type="button" class="button text-light">
-                        Kostenlose kompetente Beratung & unverbindliches Angebot
-                        </button>
-                  </div>
-                  <div class="col-md-4 mb-2 align-self-start text-center">
-                    <button type="button" class="bt text-light bt1 p-4">
-                        Profitieren Sie von <span class="text-warning fst-italic">bundesweiter</span> Betreuung in jeder Lebenslage
-                        sowie einer <span class="text-warning fst-italic">persönlichen</span> und <span
-                                class="text-warning fst-italic">individuellen</span> Beratung
-
-                    </button>
-                </div>
-            </div>
-            <div class="colone">
-                <div class="col-md-4 mb-2 align-self-center text-center">
-                    <button type="button" class="button text-light">
-                        Langjährige Erfahrung
-                    </button>
-                </div>
-                <div class="col-md-4 mb-2 align-self-center text-center">
-                    <button type="button" class="bt text-light bt2 p-3">
-                        Im Bereich individueller Beratung, Service und Unterstützung
-                    </button>
-                </div>
-            
-            </div>
-            <div class="colone">
-                <div class="col-md-4 mb-2 align-self-end text-center">
-                    <button type="button" class="button text-light">
-                        Hoher Qualitäts-&
-                        Serviceanspruch
-                    </button>
-                </div>
-                <div class="col-md-4 mb-2 align-self-end text-center">
-                    <button type="button" class="bt text-light bt3 p-2">
-                        Das Angebot wird <span class="text-Warning fst-italic">nach Ihren Wünschen und Bedürfnissen</span> für Sie
-                        erstellt. Dadurch lernen wir unsere Kunden und deren Ansprüche kennen!
-                    </button>
-                </div>
-                
-            </div>   
-                
-            </div>
-
-        </div>
-        </div>
-    </section>
-
-    <!--Section 4 : Sie über uns-->
-
-    <section id="testimonal">
-        <p> 
-        <h5 class="text-center mt-5">Sie über uns </h5>
-        </p>
-        <div class="container">
-          <section class="bg-secondary center">
-              <div class=" col-md-12 m-auto">
-                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                      <?php for($i=0; $i < count($testimonials); $i++ ){ ?>
-                      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="<?php echo $i ; ?>" aria-label="Slide <?php echo ($i + 1) ; ?>" class="<?php if ($i == 0){echo'active'; } ?> " ></button>
-                        <?php } ?>
-                  </div>
-                  <div class="carousel-inner slider justify-content-center h-50 w-100 p-auto  ">
-                    <?php for($i=0; $i < count($testimonials); $i++ ){ ?>
-                    <div class="carousel-item <?php if ($i == 0){echo'active'; } ?>">
-                      <div class="responsive-bg w-100 h-100"> 
-                      </div>
-                      <!-- <div class="overlay"></div> -->
-                      <div class="carousel-item-description w-100">
-                        <div class="w-100 row h-100">
-                        <?php for($j=0; $j<3; $j++){ 
-                              if($testimonials[$i][$j] == []){
-                              continue;
-                              } ?>
-                            <div class="col-10 col-md-6 col-lg-6 col-xl-4  text-center m-auto p-4 h-100  ">
-                                <button class="bt text-light bt1 p-2 h-75 w-100 " style="overflow:auto;">
-                                    <span class="h1">“</span> <?php 
-                                                echo nl2br($testimonials[$i][$j]["content"]);
-                                             ?> 
-                                    <span class="h1">„</span> 
-                                </button>
-                                <div class="col-md-12 text-center">
-                                    <span class="kunde"><?php echo $testimonials[$i][$j]["pseudo"] ; ?></span>
-                                </div>
-                            </div>
-                        <?php }  ?>
-                        </div>
-                      </div>
-
-                    </div>
-                    <?php } ?>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-          </section>
-        </div>
-        <!-------------------------------Kontakt-------------------------------->
-        <section id="kontakt">
-            <div class="container ">
-                <div><h3 class="text-center fw-bold">So finden Sie uns</h3></div>
-                <br />
-                <div class="row gy-4 align-items-center">
-                    <div class="col ratio ratio-4x3 text-md-center border border-2 border-secondary p-4 rounded rounded-5" >
-                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.373458550927!2d8.1699057!3d49.4585578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47963765e0aebf29%3A0xf69a61bb771eee31!2sWeinstra%C3%9Fe%20S%C3%BCd%2020%2C%2067098%20Bad%20D%C3%BCrkheim!5e0!3m2!1sen!2sde!4v1618574946995!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <br />
-                    <div class="col-md-6 ">
-                        <form class="my-form border border-2 border-secondary p-4 rounded rounded-5 shadow shadow-lg" action="traitements/aboutForm.php" method="POST">
-                            <div class="form-group fw-bold">
-                                <label for="form-name">Name:</label>
-                                <input type="text" class="form-control" id="form-name" name="name" placeholder="Name" value="<?php if(isset($name)){echo $name;} ?>" required="required">
-                            </div>
-                            <div class="form-group fw-bold">
-                                <label for="form-email">Ihre Email:</label>
-                                <input type="email" class="form-control" id="form-email" name="mail" placeholder="Email Adresse" value="<?php if(isset($mail)){echo $mail;} ?>"  required="required">
-                            </div>
-                            <div class="form-group fw-bold">
-                                <label for="form-subject">Telefon:</label>
-                                <input type="phone" class="form-control" id="form-subject" name="telefon" placeholder="Nummer" value="<?php if(isset($telefon)){echo $telefon;} ?>"  required="required">
-                            </div>
-                            <div class="form-group fw-bold">
-                                <label for="form-message">Ihre Nachricht:</label>
-                                <textarea class="form-control" id="form-message" name="message" placeholder="Nachricht"  required="required"><?php if(isset($message)){echo $message;} ?></textarea>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-1 m-1">
-                                    <input type="checkbox" class="f" name="datenschutz" id="datenschutz" style="width: auto; margin-bottom: 0px;" required='required'>
-                                </div>
-                                <div class="col-md-8 m-1">
-                                    <label for="datenschutz">Ich habe die Datenschutzerklärung gelesen und bin damit einverstanden</label>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary mt-1 " type="submit">Senden</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-    </section>
-
-
 
 
 
   <div>
     <!-- Footer -->
-    <?php include "traitements/compteur_visites.php" ?>
+    
+    <?php
+    $premiereVisite = false;
+    include "traitements/compteur_visites.php" ?>
     <?php include "includes/pages/footer.php" ?>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -409,6 +81,33 @@ include "traitements/testimonialForm.php";
       $('[data-toggle="tooltip"]').tooltip();   
     });
   </script>
+    <?php 
+    var_dump($premiereVisite);
+    if($premiereVisite == true){?>
+      <script type="text/javascript">
+          $(document).ready(function(){
+            var myModal = new bootstrap.Modal(document.getElementById('homePopUp'))
+            myModal.show();
+          });
+      </script>
+    <?php } ?>
+    <script>
+      function updateVisit(){
+        $.ajax({
+          url: "traitements/compteur_visites.php?gewinnspiel=<?php echo $_SERVER['SCRIPT_NAME'] ?>",
+          method: 'GET'
+        })
+      }
+
+      $( window ).scroll(function() {
+        $("#listItem5").animate(
+          {
+            left: '250px',
+            opacity: '0.5',
+          }
+        ).fadeIn('slow')
+      });
+    </script>
   <script>
 //     var slideIndex = 1;
 // showSlides(slideIndex);
