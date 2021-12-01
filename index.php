@@ -2,6 +2,7 @@
 session_start();
 $pagename = "Home";
 $pageStyles= "<link rel='stylesheet' href='assets/css/index.css'>"; //balise pour ajouter un fichier CSS propre à cette page
+$pageStyles.= "<link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'>"; //balise pour ajouter un fichier CSS propre à cette page
 include "includes/pages/header.php" ;
 $testimonials = [];
 include "traitements/testimonialForm.php";
@@ -73,6 +74,7 @@ include "traitements/testimonialForm.php";
     include "traitements/compteur_visites.php" ?>
     <?php include "includes/pages/footer.php" ?>
   </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
@@ -82,7 +84,6 @@ include "traitements/testimonialForm.php";
     });
   </script>
     <?php 
-    var_dump($premiereVisite);
     if($premiereVisite == true){?>
       <script type="text/javascript">
           $(document).ready(function(){
@@ -100,13 +101,12 @@ include "traitements/testimonialForm.php";
       }
 
       $( window ).scroll(function() {
-        $("#listItem5").animate(
-          {
-            left: '250px',
-            opacity: '0.5',
-          }
-        ).fadeIn('slow')
+        $("#listItem5").fadeIn('slow')
       });
+    </script>
+    <script>
+//     initinialisation de l'animation Onscroll;
+      AOS.init();
     </script>
   <script>
 //     var slideIndex = 1;
