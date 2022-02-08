@@ -19,7 +19,7 @@ __2. Zugangsdaten für die Datenbank__
  * DB-Benutzer: dbu368388
  * Passwort: beamtenVersicherung21.de
 
-P.S: Falls es irgendwelche Frage gibt rund um die Webseite und ihre Hosting, können sie mich gerne kontaktieren.
+P.S: Falls es irgendwelche Frage gibt rund um die Webseite und ihr Hosting, können Sie mich gerne kontaktieren.
 
 -----------------
 * Author: Jeriel Nkouadja Mbiedou
