@@ -7,8 +7,8 @@ Dieses Readme enthält alle wesentlichen Passwörter, um sich mit dem Server der
 
 Zugangsdaten für den Server :
 
-Server: access-5002424703.ud-webspace.de
-Benutzername:a241306
+Server: access-5002424703.ud-webspace.de //
+Benutzername:a241306 #
 Port:22
 Passwort: Beamtenversicherung1234
 
