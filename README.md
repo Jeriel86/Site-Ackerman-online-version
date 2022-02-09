@@ -5,7 +5,7 @@ Dieser Ordner enthält den Quellcode der aktuellen Version der Firmenwebsite der
 Dieses Readme enthält alle wesentlichen Passwörter, um sich mit dem Server der Online-Site und der aktuellen Datenbank verbinden zu können.
 
 
-__1.Loginsdaten für United Domains__
+__1. Loginsdaten für United Domains__
 
 * Email: Info@ackermann.vkb.de
 * Passwort: Sommer2021
