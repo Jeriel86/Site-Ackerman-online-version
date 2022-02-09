@@ -26,13 +26,13 @@
                          <button type="button" class="btn" style="background-color:rgb(162,196,229); color:rgb(1,0,0)">1. Schritt: Sie während des <strong>Studiums</strong></button>
                     </div>
                     <div class="col-md-4 mb-2 mt-2 block align-self-end p-2 position-relative" style="height: 168px;color:rgb(1,0,0)">
-                    <div class="position-relative py-1">
+                    <div class="position-relative ">
                         ▪ Anwartschaftsversicherung für die private Krankenversicherung 
-                        <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> <br>
+                        <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> <br>
                     </div>
                     <div class="position-relative py-1">
                         ▪ Private Haftpflichtversicherung
-                        <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> <br>
+                        <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> <br>
                     </div>
 
                     </div>
@@ -44,31 +44,31 @@
                     <div class="col-md-4 mb-2 mt-2 block align-self-end px-2">
                         <div class="position-relative py-1">
                             <span style="color: rgb(196,78,20);" >▪ Berufsunfähigkeitsversicherung</span>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1" >
                             <span style="color: rgb(102,43,149);">▪ Dienstunfähigkeitsversicherung</span>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1">
                             <span style="color: rgb(102,43,149);">▪ Private Krankenversicherung<span>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1">
                             <span style="color: rgb(196,78,20);">▪ Krankenzusatzversicherung</span>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1">
                             <span style="color: rgb(1,0, 0);">▪ Diensthaftpflichtversicherung</span> 
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1">
                             <span style="color: rgb(1,0,0);">▪ Schlüsselverlustversicherung</span> 
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1">
                             <span style="color: rgb(1,0,0);">▪ Absicherung der Familie<span>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                     </div>
                 </div>
@@ -79,23 +79,23 @@
                     <div class="col-md-4 mb-2 mt-2 block align-self-end px-2"style="min-height:168px;color:rgb(1,0,0)">
                         <div class="position-relative py-1">
                             ▪ Lebensqualität im Ruhestand<br>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1" >
                             ▪ Steuern sparen<br>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1">
                             ▪ Sparen und Rendite<br>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1">
                             ▪ Rechtsschutz<br>
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
                         <div class="position-relative py-1">
                             ▪ Immobilienwunsch
-                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-primary text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
+                            <div class="position-absolute top-50 start-100 translate-middle-y"> <a href="#" class="mx-3 p-1 border border-dark text-white rounded" style="background-color: rgb(192,192,192); text-decoration:none"> video</a></div> 
                         </div>
 
 
